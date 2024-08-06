@@ -4,12 +4,14 @@ import React, { useState, ChangeEvent } from "react";
 import { postSourceScan } from "../api/sourceScan";
 import mockInputs from "../constants/mockInputs";
 import Claim from "../components/Claim";
+import Modal from "../components/Modal";
 
 export default function Home() {
   const [text, setText] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const [scanResult, setScanResult] = useState<any | null>(null);
   const [sampleTextInput, setSampleTextInput] = useState<number>(0);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleClickGo = async () => {
     try {
@@ -35,6 +37,14 @@ export default function Home() {
     setText(e.target.value);
   };
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <main className="flex flex-col lg:flex-row min-h-screen p-4 bg-gray-900">
       <div className="mt-8 mx-auto lg:mx-12 w-full lg:w-1/2 flex flex-col items-center gap-4">
@@ -54,6 +64,12 @@ export default function Home() {
         >
           Go
         </button>
+        <button
+          className="mt-4 text-blue-400 underline"
+          onClick={handleOpenModal}
+        >
+          How to use this app
+        </button>
       </div>
       <div className="w-full lg:w-1/2 mx-auto my-8 lg:mx-8 lg:my-16">
         {scanResult ? (
@@ -66,6 +82,7 @@ export default function Home() {
           <pre className="text-yellow-100 whitespace-pre-wrap">No results yet.</pre>
         )}
       </div>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </main>
   );
 }
