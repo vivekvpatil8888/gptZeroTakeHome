@@ -1,19 +1,24 @@
+import axios from 'axios';
 import exampleResponse from '../data/exampleResponse.json';
 
 export const postSourceScan = async (text: string): Promise<string> => {
   try {
+    // Uncomment the below lines to use the actual API call
+    // const response = await axios.post('/api/cite', { document: text });
+    // const responseBody = response.data;
+
+    // Temporary: Using mock response for development/testing
     const response = {
-      ok: true,
-      json: async () => exampleResponse
+      data: exampleResponse,
+      status: 200,
+      statusText: 'OK',
     };
 
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
+    if (response.status !== 200) {
+      throw new Error(`Network response was not ok: ${response.statusText}`);
     }
 
-    const responseBody = await response.json();
-    const responseBodyString = JSON.stringify(responseBody, null, 2);
-
+    const responseBodyString = JSON.stringify(response.data, null, 2);
     return responseBodyString;
   } catch (error) {
     console.error("Error occurred during source scan:", error);

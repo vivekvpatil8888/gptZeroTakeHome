@@ -3,11 +3,12 @@
 import React, { useState, ChangeEvent } from "react";
 import { postSourceScan } from "../api/sourceScan";
 import mockInputs from "../constants/mockInputs";
+import Claim from "../components/Claim";
 
 export default function Home() {
   const [text, setText] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
-  const [scanResult, setScanResult] = useState<string | null>(null);
+  const [scanResult, setScanResult] = useState<any | null>(null);
   const [sampleTextInput, setSampleTextInput] = useState<number>(0);
 
   const handleClickGo = async () => {
@@ -18,23 +19,24 @@ export default function Home() {
         return;
       }
       const scanResult = await postSourceScan(text);
-      setScanResult(scanResult);
+      setScanResult(JSON.parse(scanResult));
     } catch (error) {
       console.error(error);
+      setError("An error occurred while scanning the document.");
     }
   };
 
   const handleClickSampleText = () => {
     setText(mockInputs[sampleTextInput]);
     setSampleTextInput((sampleTextInput + 1) % mockInputs.length);
-  }
+  };
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
   };
 
   return (
-    <main className="flex min-h-screen 24">
+    <main className="flex min-h-screen p-4">
       <div className="mt-8 ml-12 w-[50%] flex flex-col items-center gap-4">
         <button onClick={handleClickSampleText} className="place-self-start underline">
           Try Sample Text
@@ -53,9 +55,17 @@ export default function Home() {
           Go
         </button>
       </div>
-      <pre className="w-[50%] mx-8 my-16 text-yellow-100 whitespace-pre-wrap">
-        {scanResult}
-      </pre>
+      <div className="w-[50%] mx-8 my-16">
+        {scanResult ? (
+          <div>
+            {Object.keys(scanResult.document.claims).map((claimId) => (
+              <Claim key={claimId} claim={scanResult.document.claims[claimId]} citations={scanResult.document.citations} />
+            ))}
+          </div>
+        ) : (
+          <pre className="text-yellow-100 whitespace-pre-wrap">No results yet.</pre>
+        )}
+      </div>
     </main>
   );
 }
