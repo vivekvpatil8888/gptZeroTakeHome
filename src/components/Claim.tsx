@@ -53,7 +53,8 @@ const Claim: React.FC<ClaimProps> = ({ claim, citations }) => {
                             <a
                                 href={citations[citation.citation_id].link}
                                 target="_blank"
-                                className="text-blue-300 underline"
+                                rel="noopener noreferrer"
+                                className="text-blue-300 underline block break-words"
                             >
                                 {citations[citation.citation_id].link}
                             </a>
