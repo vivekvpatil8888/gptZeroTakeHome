@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation: Cite Rite</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        pre { background-color: #f4f4f4; padding: 10px; }
+        code { color: #D34; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>API Documentation: Cite Rite</h1>
+    <p>This document explains the API for Cite Rite, detailing the request and response schema for the <code>/api/cite</code> endpoint.</p>
+
+    <h2>Endpoint Structure</h2>
+    <p><strong>URL:</strong> <code>/api/cite</code></p>
+    <p><strong>Method:</strong> <code>POST</code></p>
+    <p><strong>Content-Type:</strong> <code>application/json</code></p>
+    <p><strong>Response Format:</strong> <code>application/json</code></p>
+
+    <h2>Request Schema</h2>
+    <pre><code>{
+  "document": "String (required)"
+}</code></pre>
+
+    <h2>Response Schema</h2>
+    <pre><code>{
+  "document": {
+    "claims": {
+      "claim_id": {
+        "start_index": "Integer",
+        "end_index": "Integer",
+        "claim_text": "String",
+        "document_id": "String",
+        "parent_claim_ids": ["String"],
+        "children_claim_ids": ["String"],
+        "relevant_citations": [{
+          "citation_id": "String",
+          "snippet": "String"
+        }]
+      }
+    },
+    "citations": {
+      "citation_id": {
+        "fulltext": "String",
+        "link": "String",
+        "summary": "String",
+        "tags": ["String"]
+      }
+    }
+  }
+}</code></pre>
+
+    <h2>Claims</h2>
+    <p>Claims are logical statements extracted from the input text. They represent premises or conclusions that can be evaluated as either evidence-based or evidence-free. Each claim is identified by a unique <code>claim_id</code> and includes text along with its position within the document.</p>
+    <p>A claim spans from the <code>start_index</code> to <code>end_index</code> character in the inputted document.</p>
+    <p>Claims may have relationships with other claims, represented as <code>parent_claim_ids</code> and <code>children_claim_ids</code>. Parent claims are broader logical supersets of the claim, while child claims are more specific subsets derived from or supporting the parent claim.</p>
+
+    <h2>Citations</h2>
+    <p>Citations are references or sources that support or relate to the claims identified within the document. Each citation is linked to one or more claims and contains essential information about the source:</p>
+    <ul>
+        <li><strong>Fulltext:</strong> The complete text or excerpt from the source that is relevant to the claim.</li>
+        <li><strong>Link:</strong> A URL to access the full document or specific page providing context or additional information.</li>
+        <li><strong>Summary:</strong> A brief summary of the source content.</li>
+        <li><strong>Tags:</strong> Keywords or categories that help classify the nature of the source (e.g., Blog, Academic, Government).</li>
+    </ul>
+    <p>Citations help establish the credibility of claims by providing verifiable evidence or context and play a crucial role in validating the information presented in the document.</p>
+
+    <h2>Example Payload</h2>
+    <h3>Request</h3>
+    <pre><code>{
+  "document": "Sample text containing various claims to be verified."
+}</code></pre>
+
+    <h3>Response</h3>
+    <pre><code>{
+  "document": {
+    "claims": {
+      "0": {
+        "start_index": 0,
+        "end_index": 115,
+        "claim_text": "The Eiffel Tower stands as a remarkable testament to the ingenuity and innovation of late 19th-century engineering.",
+        "document_id": "0",
+        "parent_claim_ids": [],
+        "children_claim_ids": ["2", "4", "7", "9"],
+        "relevant_citations": []
+      },
+      // ...
+    },
+    "citations": {
+      "1": {
+        "fulltext": "Commissioned as the centrepiece for the 1889 Exposition Universelle (World's Fair) in Paris, Gustave Eiffel...",
+        "link": "https://simcorner.com/blogs/travel-guides/unveiling-the-magnificent-history-and-construction-of-the-eiffel-tower",
+        "summary": "Commissioned for the 1889 Exposition Universelle in Paris, the Eiffel Tower was designed by Gustave Eiffel...",
+        "tags": ["Blog"]
+      },
+      ...
+    }
+  }
+}</code></pre>
+</body>
+</html>
