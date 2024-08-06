@@ -44,22 +44,26 @@ const Claim: React.FC<ClaimProps> = ({ claim, citations }) => {
             {showDetails && (
                 <div className="mt-2">
                     <p className="text-sm text-gray-400">Citations:</p>
-                    {claim.relevant_citations.map((citation) => (
-                        <div key={citation.citation_id} className="my-2 p-2 bg-gray-700 rounded-lg">
-                            <p className="text-yellow-400">{citation.snippet}</p>
-                            <p className="text-sm text-gray-300">
-                                {citations[citation.citation_id].summary}
-                            </p>
-                            <a
-                                href={citations[citation.citation_id].link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-300 underline block break-words"
-                            >
-                                {citations[citation.citation_id].link}
-                            </a>
-                        </div>
-                    ))}
+                    {claim.relevant_citations.length > 0 ? (
+                        claim.relevant_citations.map((citation) => (
+                            <div key={citation.citation_id} className="my-2 p-2 bg-gray-700 rounded-lg">
+                                <p className="text-yellow-400">{citation.snippet}</p>
+                                <p className="text-sm text-gray-300">
+                                    {citations[citation.citation_id].summary}
+                                </p>
+                                <a
+                                    href={citations[citation.citation_id].link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-300 underline block break-words"
+                                >
+                                    {citations[citation.citation_id].link}
+                                </a>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-sm text-gray-400">No citations found</p>
+                    )}
                 </div>
             )}
         </div>
