@@ -9,6 +9,7 @@
     "format": "npx prettier --write '**/*'"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.20",
     "axios": "^1.7.3",
     "next": "14.2.3",
     "react": "^18",

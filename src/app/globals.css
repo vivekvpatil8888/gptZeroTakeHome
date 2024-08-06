@@ -28,3 +28,31 @@ body {
     text-wrap: balance;
   }
 }
+
+.main {
+  @apply flex flex-col lg:flex-row min-h-screen p-4 bg-gray-900;
+}
+
+.button {
+  @apply border-2 rounded-lg py-3 px-12 font-bold w-full text-white bg-blue-600 hover:bg-blue-700;
+}
+
+textarea {
+  @apply w-full h-[300px] lg:h-[600px] p-4 text-black rounded-lg;
+}
+
+.error {
+  @apply text-red-500;
+}
+
+.claim-container {
+  @apply p-4 my-4 border rounded-lg bg-gray-800 text-white;
+}
+
+.citation {
+  @apply text-yellow-400;
+}
+
+.link {
+  @apply text-blue-300 underline block break-words;
+}
