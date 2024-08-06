@@ -1,0 +1,179 @@
+{
+  "document": {
+    "claims": {
+      "0": {
+        "start_index": 0,
+        "end_index": 115,
+        "claim_text": "The Eiffel Tower stands as a remarkable testament to the ingenuity and innovation of late 19th-century engineering.",
+        "document_id": "0",
+        "parent_claim_ids": [],
+        "children_claim_ids": ["2", "4", "7", "9"],
+        "relevant_citations": []
+      },
+      "1": {
+        "start_index": 116,
+        "end_index": 301,
+        "claim_text": "Commissioned for the 1889 World's Fair in Paris, this iconic structure was the brainchild of Gustave Eiffel, a visionary engineer renowned for his pioneering work in metal construction.",
+        "document_id": "0",
+        "parent_claim_ids": [],
+        "children_claim_ids": [],
+        "relevant_citations": []
+      },
+      "2": {
+        "start_index": 342,
+        "end_index": 540,
+        "claim_text": "The construction of the Eiffel Tower was a marvel of precision engineering, with over 18,000 individual iron pieces meticulously designed, calculated, and assembled using more than 2 million rivets.",
+        "document_id": "0",
+        "parent_claim_ids": ["0"],
+        "children_claim_ids": ["3"],
+        "relevant_citations": [
+          {
+            "citation_id": "1",
+            "snippet": "Crafted from over 18,000 individual iron pieces and assembled using more than 2 million rivets, the construction of the Eiffel Tower was a marvel of precision engineering."
+          }
+        ]
+      },
+      "3": {
+        "start_index": 541,
+        "end_index": 711,
+        "claim_text": "The use of innovative techniques, such as prefabrication, allowed for the swift assembly of this towering structure, culminating in its completion in just over two years.",
+        "document_id": "0",
+        "parent_claim_ids": ["3"],
+        "children_claim_ids": [],
+        "relevant_citations": [
+          {
+            "citation_id": "1",
+            "snippet": "The use of innovative techniques, such as prefabrication, allowed for the swift assembly of this towering structure, culminating in its completion in just over two years."
+          }
+        ]
+      },
+      "4": {
+        "start_index": 756,
+        "end_index": 822,
+        "claim_text": "Eiffel's design for the tower was a groundbreaking feat in itself.",
+        "document_id": "0",
+        "parent_claim_ids": ["0"],
+        "children_claim_ids": ["6"],
+        "relevant_citations": []
+      },
+      "5": {
+        "start_index": 823,
+        "end_index": 1010,
+        "claim_text": "The curvature of the uprights was mathematically determined to offer optimal wind resistance, with the tower's distinctive arched shape resulting from Eiffel's unique construction method.",
+        "document_id": "0",
+        "parent_claim_ids": ["6"],
+        "children_claim_ids": [],
+        "relevant_citations": [
+          {
+            "citation_id": "2",
+            "snippet": "The curvature of the uprights is mathematically determined to offer the most efficient wind resistance possible. As Eiffel himself explains: \"All the cutting force of the wind passes into the interior of the leading edge uprights. Lines drawn tangential to each upright with the point of each tangent at the same height, will always intersect at a second point, which is exactly the point through which passes the flow resultant from the action of the wind on that part of the tower support situated above the two points in question. Before coming together at the high pinnacle, the uprights appear to burst out of the ground, and in a way to be shaped by the action of the wind\"."
+          }
+        ]
+      },
+      "6": {
+        "start_index": 1020,
+        "end_index": 1195,
+        "claim_text": "This method, patented by Eiffel, allowed for the creation of a stable, self-supporting structure without the need for diagonal bracing, a revolutionary concept at the time.",
+        "document_id": "0",
+        "parent_claim_ids": ["4"],
+        "children_claim_ids": ["5"],
+        "relevant_citations": [
+          {
+            "citation_id": "4",
+            "snippet": "The fundamental idea of these pylons, or great archways, is based on a method of construction peculiar to me, of which the principle consists in giving to the edges of the pyramid a curve of such a nature that this pyramid shall be capable of resisting the force of the wind without necessitating the junction of the edges by diagonals as is usually done."
+          }
+        ]
+      },
+      "7": {
+        "start_index": 1185,
+        "end_index": 1350,
+        "claim_text": "The assembly process was a remarkable display of engineering prowess, with a team of skilled workers assembling the tower's components like a \"gigantic erector set.\"",
+        "document_id": "0",
+        "parent_claim_ids": ["0"],
+        "children_claim_ids": ["8"],
+        "relevant_citations": [
+          {
+            "citation_id": "2",
+            "snippet": "A team of constructors, who had worked on the great metal viaduct projects, were responsible for the 150 to 300 workers on site assembling this gigantic erector set."
+          }
+        ]
+      },
+      "8": {
+        "start_index": 1351,
+        "end_index": 1522,
+        "claim_text": "The precision and efficiency of the construction process were widely acclaimed by contemporary chroniclers, solidifying the Eiffel Tower's status as an engineering marvel.",
+        "document_id": "0",
+        "parent_claim_ids": ["7"],
+        "children_claim_ids": [],
+        "relevant_citations": [
+          {
+            "citation_id": "1",
+            "snippet": "While celebrated today as an iconic masterpiece, the Eiffel Tower faced initial opposition from Parisian intellectuals and artists who deemed its design unsuitable for the city. Yet, over time, public sentiment shifted, and the tower evolved into an integral part of Parisian identity, representing progress, innovation, and architectural splendour."
+          },
+          {
+            "citation_id": "2",
+            "snippet": "It only took five months to build the foundations and twenty-one to finish assembling the metal pieces of the Tower. Considering the rudimentary means available at that period, this could be considered record speed. The assembly of the Tower was a marvel of precision, as all chroniclers of the period agree."
+          }
+        ]
+      },
+      "9": {
+        "start_index": 1545,
+        "end_index": 1682,
+        "claim_text": "Over a century later, the Eiffel Tower continues to captivate the world as a symbol of architectural splendor and engineering excellence.",
+        "document_id": "0",
+        "parent_claim_ids": ["0"],
+        "children_claim_ids": ["10", "11"],
+        "relevant_citations": []
+      },
+      "10": {
+        "start_index": 1683,
+        "end_index": 1840,
+        "claim_text": "Its innovative design and construction techniques paved the way for future advancements in structural engineering, aerodynamics, and wind tunnel experiments.",
+        "document_id": "0",
+        "parent_claim_ids": ["9"],
+        "children_claim_ids": [],
+        "relevant_citations": [
+          {
+            "citation_id": "3",
+            "snippet": "Eiffel made use of advanced knowledge of the behavior of metal arch and metal truss form under loading, including wind forces. His results started a revolution in civil engineering and architectural design."
+          }
+        ]
+      },
+      "11": {
+        "start_index": 1841,
+        "end_index": 1995,
+        "claim_text": "The tower's enduring legacy serves as a testament to the power of human ingenuity and the boundless potential of engineering to shape the world around us.",
+        "document_id": "0",
+        "parent_claim_ids": ["9"],
+        "children_claim_ids": [],
+        "relevant_citations": []
+      }
+    },
+    "citations": {
+      "1": {
+        "fulltext": "Commissioned as the centrepiece for the 1889 Exposition Universelle (World's Fair) in Paris, Gustave Eiffel, a visionary engineer, was entrusted with the task of crafting an emblematic structure to commemorate the 100th anniversary of the French Revolution. Eiffel, along with his team of talented engineers, embraced the challenge, giving birth to what would become an icon revered worldwide. Crafted from over 18,000 individual iron pieces and assembled using more than 2 million rivets, the construction of the Eiffel Tower was a marvel of precision engineering. The use of innovative techniques, such as prefabrication, allowed for the swift assembly of this towering structure, culminating in its completion in just over two years. Rising to a height of 1,083 feet (330 metres) at the tip, the Eiffel Tower held the distinction of being the tallest man-made structure until the advent of the Chrysler Building in New York City. Divided into three observation levels, each offering panoramic views of Paris, this lattice-worked marvel continues to draw millions of visitors annually...",
+        "link": "https://simcorner.com/blogs/travel-guides/unveiling-the-magnificent-history-and-construction-of-the-eiffel-tower",
+        "summary": "Commissioned for the 1889 Exposition Universelle in Paris, the Eiffel Tower was designed by Gustave Eiffel to mark the 100th anniversary of the French Revolution. Constructed from over 18,000 iron pieces and more than 2 million rivets, it was completed in just over two years. Initially the tallest man-made structure at 1,083 feet, it faced early criticism but became a symbol of Parisian progress and innovation. Today, it attracts millions of visitors annually, standing as a testament to human ingenuity and perseverance.",
+        "tags": ["Blog"]
+      },
+      "2": {
+        "fulltext": "Origins and Construction of the Eiffel Tower It was for the 1889 Exposition Universelle, the date that marked the 100th anniversary of the French Revolution, that a great competition was launched in 1886. The first digging work started on the 26th January 1887. On the 31st March 1889, the Tower had been finished in record time – 2 years, 2 months and 5 days – and was established as a veritable technical feat. The Design of the Eiffel Tower The plan to build a tower 300 metres high was conceived as part of preparations for the World's Fair of 1889. Bolting the joint of two crossbowmen Bolting the joint of two crossbowmen.(c): Collection Tour Eiffel The wager was to \"study the possibility of erecting an iron tower on the Champ-de-Mars with a square base, 125 metres across and 300 metres tall\". Selected from among 107 projects, it was that of Gustave Eiffel, an entrepreneur, Maurice Koechlin and Emile Nouguier, both engineers, and Stephen Sauvestre, an architect, that was accepted. Emile Nouguier and Maurice Koechlin, the two chief engineers in Eiffel's company, had the idea for a very tall tower in June 1884. It was to be designed like a large pylon with four columns of lattice work girders, separated at the base and coming together at the top, and joined to each other by more metal girders at regular intervals. The tower project was a bold extension of this principle up to a height of 300 metres - equivalent to the symbolic figure of 1000 feet. On September 18 1884 Eiffel registered a patent \"for a new configuration allowing the construction of metal supports and pylons capable of exceeding a height of 300 metres\". In order to make the project more acceptable to public opinion, Nouguier and Koechlin commissioned the architect Stephen Sauvestre to work on the project's appearance...",
+        "link": "https://www.toureiffel.paris/en/the-monument/history",
+        "summary": "The Eiffel Tower was commissioned for the 1889 Exposition Universelle to mark the 100th anniversary of the French Revolution. Construction began on January 26, 1887, and finished on March 31, 1889, taking just over two years. The tower, designed by Gustave Eiffel and his team, consists of 18,038 iron pieces and 2.5 million rivets. At 330 meters, it was the tallest man-made structure until the Chrysler Building. Despite initial criticism, it became an iconic symbol of Paris. Today, it attracts millions of visitors and stands as a testament to engineering prowess and cultural significance.",
+        "tags": ["Government", "Business"]
+      },
+      "3": {
+        "fulltext": "Eiffel Tower It has been called a technological masterpiece in building-construction history. Built in commemoration of the French Revolution, the Eiffel Tower is one of the world's premier tourist attractions. It has been compared to the Great Pyramid of Giza and St. Peter's Basilica in Rome. Nothing remotely like it has ever been constructed. The tower is located on the Left Bank of the Seine River, at the northwestern extreme of the Parc du Champ de Mars, a park in front of the École Militaire that used to be a military parade ground. To truly appreciate this marvelous structure, let's discuss its history. The tower was built for the Paris World's Fair in 1889. When the French Government wasorganizing this event, a competition was held for designs for a suitable monument. Over 100 designs were submitted, and the World's Fair Committee selected the conception of a 984 foot (300 meter) open-lattice wrought iron tower. This design was the creation of Alexendre-Gustave Eiffel. He was a renown French civil engineer who specialized in metal construction. His previous works included an iron bridge at Bordeaux, the 540 foot (162 meter) Garabit viaduct, the moveable dome at the observatory in Nice, and the framework of the Statue of Liberty in New York Harbor. Eiffel startled the world with the construction of the tower. In contrast to such older monuments, Eiffel's tower was completed in a matter of months with a small labor force. Eiffel made use of advanced knowledge of the behavior of metal arch and metal truss form under loading, including wind forces. His results started a revolution in civil engineering and architectural design. With the completion of the tower, Eiffel earned the nickname, \"magician of iron.\" The tower was almost torn down on several occasions and despite long and continuous protests, the tower vindicated itself aesthetically. With the advent of radio and television, the Eiffel Tower gained even greater importance as a transmission tower. For many years, it was the tallest man-made structure on earth. Eiffel Tower 2\tThis tower's dimensions are remarkable. The current height of the tower is 1069 feet (320.75 meters), which is about the equivalent of a 105-story building. It is still the tallest structure in Paris by a very wide margin. Its size is very deceiving since there are no other structures close to it. The levels accessible to the public are at heights of 189 feet (57.63 meters), or 19 stories; 380 feet (115.73 meters), or 38 stories; and 896 feet (273 meters), or 89 stories. From the summit, you can see as far away as Chartres (to the southwest) on a clear day. The base of the tower covers a square area of 328 feet (100 meters) on a side. You can stand in the center of the area at the base and look directly up at the floor of the second level, 38 stories above. The tower is built of puddled iron (very pure structural iron), and weights 7300 metric tons. It is extremely light. The tower actually weighs less than the air that surrounds it! If a scale model of the tower one foot (30 cm) high were constructed, it would weigh only as much as a nickel (seven grams)! The four pillars supporting the tower are aligned to the points of the compass. You can use the tower as a reference to find you way in Paris. Another unique feature is the tower's base. The four semi-circular arches required elevators to ascend on a curve. The glass-cage machines were designed by the Otis Elevator Company of the United States. These elevators provide visitors a fantastic view as they ride to the top of the tower. This tower moves in the wind. On days with high, gusting winds, the wind can reach speeds in excess of 100 mph (160 kph) at the summit of the tower. Visitors can feel the tower swaying gently at the summit. Under such wind conditions, the tower is usually closed to the public, although there is always an engineer present at the summit to monitor telecommunications equipment. The magnitude of the sway in the tower, under worst-case conditions, is about six inches (15 cm). There is no danger of the tower being damaged by wind-induced movement since it is designed to withstand movements easily five times beyond those produced by the highest winds ever recorded. Today, the movements are monitored by a laser alignment system. The tower also leans very slightly in bright sunlight, as one side is heated by the sun and expands slightly...",
+        "link": "https://www2.engineering.com/Library/ArticlesPage/tabid/85/ArticleID/62/Eiffel-Tower.aspx",
+        "summary": "The Eiffel Tower, a technological masterpiece, was built for the 1889 Paris World's Fair to commemorate the French Revolution. Designed by Gustave Eiffel, it stands 984 feet tall and was completed in just over two years. Despite initial criticism, it became a global icon and a vital transmission tower for radio and television. Made of 18,000 iron pieces and weighing 7,300 tons, the tower is noted for its innovative use of metal arches and trusses. Today, it remains a symbol of Paris, attracting millions of visitors annually and serving as a testament to engineering ingenuity and historical significance.",
+        "tags": ["Blog", "Citation-based"]
+      },
+      "4": {
+        "fulltext": "Gustave Eiffel (15 Dec 1832 - 28 Dec 1923) French civil engineer who specialized in metal structures, known especially for the Eiffel Tower in Paris, iron bridges and the framework within the Statue of Liberty in New York harbor. Science Quotes by Gustave Eiffel (11 quotes) [It has been ascertained by statistical observation that in engineering enterprises one man is killed for every million francs that is spent on the works.] Supposing you have to build a bridge at an expense of one hundred million francs, you must be prepared for the death of one hundred men. In building the Eiffel Tower, which was a construction costing six million and a half, we only lost four men, thus remaining below the average. In the construction of the Forth Bridge, 55 men were lost in over 45,000,000 francs' worth of work. That would appear to be a large number according to the general rule, but when the special risks are remembered, this number shows as a very small one. ᅳ Gustave Eiffel As quoted in 'M. Eiffel and the Forth Bridge', The Tablet (15 Mar 1890), 75, 400. Similarly quoted in Robert Harborough Sherard, Twenty Years in Paris: Being Some Recollections of a Literary Life (1905), 169, which adds to the end “, and reflects very great credit on the engineers for the precautions which they took on behalf of their men.” Sherard gave the context that Eiffel was at the inauguration [4 Mar 1890] of the Forth Bridge, and gave this compliment when conversing there with the Prince of Wales. Being the most striking manifestation of the art of metal structures by which our engineers have shown in Europe, it [the Eiffel Tower] is one of the most striking of our modern national genius. ᅳ Gustave Eiffel...",
+        "link": "https://todayinsci.com/E/Eiffel_Gustave/EiffelGustave-Quotations.htm",
+        "summary": "Gustave Eiffel (1832-1923) was a renowned French civil engineer specializing in metal structures. He is best known for designing the Eiffel Tower in Paris and the framework of the Statue of Liberty in New York Harbor. The Eiffel Tower, built for the 1889 Paris World's Fair to commemorate the French Revolution, was a technological marvel completed in just over two years. Despite initial opposition, it became a global icon and a vital radio and television transmission tower. Eiffel's work in metal construction, including innovative use of arches and trusses, revolutionized engineering and architectural design, earning him the nickname \"magician of iron.\"",
+        "tags": ["Blog", "Business"]
+      }
+    }
+  }
+}
