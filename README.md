@@ -1,3 +1,19 @@
+# Desktop UI
+
+![alt text](image.png)
+
+# Mobile UI
+
+![alt text](image-1.png)
+
+# Claim component UI
+
+![alt text](image-2.png)
+
+# How to use component UI
+
+![alt text](image-3.png)
+
 # Cite Rite
 
 ## Background
