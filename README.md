@@ -16,7 +16,7 @@ The frontend is in a poor state. The user interface is unattractive, and the sca
 ### Objectives:
 
 1. Display Scan Results Intuitively:
-   - Replace the raw JSON output with a structured, interactive display of the Cite Rite scan results.
+   - Replace the raw JSON output with a structured, interactive display of the Cite Rite scan results
    - Users should intuitively understand which parts of the inputted document are logical claims, and which citations are related to each claim.
 2. Enhance Interactivity:
    - Allow users to interact with a claim to view more detailed information about its citations.
